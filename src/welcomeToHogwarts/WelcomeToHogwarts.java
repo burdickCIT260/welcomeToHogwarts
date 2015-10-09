@@ -1,0 +1,131 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package welcomeToHogwarts;
+
+import byui.cit260.hogwartsSchool.model.ChatScene;
+import byui.cit260.hogwartsSchool.model.ClassSceneType;
+import byui.cit260.hogwartsSchool.model.Location;
+import byui.cit260.hogwartsSchool.model.QuidditchTypeScene;
+import cit260.welcomeToHogwarts.model.Exam;
+import cit260.welcomeToHogwarts.model.Game;
+import cit260.welcomeToHogwarts.model.Map;
+import cit260.welcomeToHogwarts.model.NotesInventory;
+import cit260.welcomeToHogwarts.model.Player;
+
+/**
+ *
+ * @author Coggputer
+ */
+public class WelcomeToHogwarts {
+    
+    /**
+     *  @param args the command line arguments
+     */
+    public static void main(String[] args) {
+    
+    /**
+     * Game
+     */
+        Game theGame = new Game();
+    
+        theGame.setPointAmount(700);
+        theGame.setAllNotes("Here is the menu to access the notes!");
+        theGame.setPlayerHouse("Griffyndor");
+        theGame.setTotalPoints(1000);
+        
+        String pointAmount = theGame.toString();
+        System.out.println(theGame);
+    /**
+    * Exams
+    */
+        Exam theExam = new Exam();
+        
+        theExam.setViewNotes("Notes menu!");
+        theExam.setMultipleChoice("Here are some multiple choice questions!");
+        theExam.setGetPoints("+100 points!");
+        
+        String viewNotes = theExam.toString();
+        System.out.println(theExam);
+    /**
+     * Notes Inventory
+     */
+        NotesInventory notesInv = new NotesInventory();
+        
+        notesInv.setClassNotes("List of all the classes");
+        notesInv.setOtherNotes("List of the other encounters that resulted in getting notes");
+        
+        String classNotes = notesInv.toString();
+        System.out.println(notesInv);
+        
+    /**
+     * Player
+     */
+        Player thePlayer = new Player();
+        
+        thePlayer.setPlayerName("Stephanie");
+        thePlayer.setSortedHouse("Hufflepuff");
+        
+        String playerName = thePlayer.toString();
+        System.out.println(thePlayer);
+    /**
+     * Map
+     */
+        Map theMap = new Map();
+        
+        theMap.setClassLocation("Here's the map!");
+        theMap.setThroughHallways("Hallways you have to pass through");
+        
+        String classLocation = theMap.toString();
+        System.out.println(theMap);
+    /**
+     * Location
+     */
+        Location theLocation = new Location();
+        
+        theLocation.setPlaceName("Here's the name of a place");
+        theLocation.setVisited("List of visited places I guess?");
+                
+        String placeName = theLocation.toString();
+        System.out.println(placeName);
+    /**
+     * Chat Scene
+     */
+        ChatScene chatting = new ChatScene();
+        
+        chatting.setDescription("Here's a description");
+        chatting.setTakeNotes("The option to take some notes");
+        chatting.setChat("blah blah blah chatting");
+        
+        String description = chatting.toString();
+        System.out.println(chatting);
+    /**
+     * Class Scene Type
+     */
+        ClassSceneType classScene = new ClassSceneType();
+        
+        classScene.setDescription("here's a description");
+        classScene.setTakeNotes("The option to take some notes");
+        classScene.setTeacherTask("The teacher is telling you to do something!");
+        
+        String takeNotes = classScene.toString();
+        System.out.println(classScene);
+    
+    /**
+     * Quidditch Type Scene
+     */
+        QuidditchTypeScene quidditch = new QuidditchTypeScene();
+        
+        quidditch.setDescription("Here's a description");
+        quidditch.setGameAnnouncement("Here's an announcement");
+        quidditch.setGetPoints(100);
+        
+        String gameAnnouncement = quidditch.toString();
+        System.out.println(quidditch);
+
+        
+    } 
+
+}
