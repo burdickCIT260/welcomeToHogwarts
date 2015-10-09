@@ -9,11 +9,11 @@ import byui.cit260.hogwartsSchool.model.ChatScene;
 import byui.cit260.hogwartsSchool.model.ClassSceneType;
 import byui.cit260.hogwartsSchool.model.Location;
 import byui.cit260.hogwartsSchool.model.QuidditchTypeScene;
-import cit260.welcomeToHogwarts.model.Exam;
-import cit260.welcomeToHogwarts.model.Game;
-import cit260.welcomeToHogwarts.model.Map;
-import cit260.welcomeToHogwarts.model.NotesInventory;
-import cit260.welcomeToHogwarts.model.Player;
+import byui.cit260.hogwartsSchool.model.Exam;
+import byui.cit260.hogwartsSchool.model.Game;
+import byui.cit260.hogwartsSchool.model.Map;
+import byui.cit260.hogwartsSchool.model.NotesInventory;
+import byui.cit260.hogwartsSchool.model.Player;
 
 /**
  *
