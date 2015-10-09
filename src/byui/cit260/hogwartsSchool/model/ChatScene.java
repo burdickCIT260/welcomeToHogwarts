@@ -10,7 +10,7 @@ import java.util.Objects;
 
 /**
  *
- * @author MyHome
+ * @author MyHome 
  */
 public class ChatScene implements Serializable{
     
