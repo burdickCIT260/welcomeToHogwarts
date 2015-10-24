@@ -171,4 +171,138 @@ public class ClassSceneControlTest {
         
     }
     
+    /**
+     * Test of calcAstronomy method, of class ClassSceneControl.
+     */
+    @Test
+    public void testCalcAstronomy() {
+        System.out.println("calcAstronomy");
+        
+        /************************************************************************************
+         * Test case #1
+         ************************************************************************************/
+        System.out.println("\tTest case #1");
+        
+        // input values for test case 1
+        double magnitude = 3001;
+        double distance = 8;
+        
+        double expResult = 46.9; //expected output returned value
+        
+    
+        // create instance of calcPotionsDiameter
+        ClassSceneControl instance = new ClassSceneControl();
+        
+        // call function to run test
+        double result = instance.calcAstronomy(magnitude, distance);
+        
+        // compare expected return value with actual value returned
+        assertEquals(expResult, result, 0.1);
+        
+       
+        /************************************************************************************
+         * Test case #2
+         ************************************************************************************/
+        System.out.println("\tTest case #2");
+        
+        // input values for test case 2
+        magnitude = 6584;
+        distance = 9;
+        
+        expResult = -1; //expected output returned value
+        
+        // call function to run test
+        result = instance.calcAstronomy(magnitude, distance);
+        
+        // compare expected return value with actual value returned
+        assertEquals(expResult, result, 0.1);
+        
+        /************************************************************************************
+         * Test case #3
+         ************************************************************************************/
+        System.out.println("\tTest case #3");
+        
+        // input values for test case 3
+        magnitude = 3001;
+        distance = 523;
+        
+        expResult = -1; //expected output returned value
+        
+        // call function to run test
+        result = instance.calcAstronomy(magnitude, distance);
+        
+        // compare expected return value with actual value returned
+        assertEquals(expResult, result, 0.1);
+        
+        /************************************************************************************
+         * Test case #4
+         ************************************************************************************/
+        System.out.println("\tTest case #4");
+        
+        // input values for test case 4
+        magnitude = 1865;
+        distance = 8;
+        
+        expResult = -1; //expected output returned value
+        
+        // call function to run test
+        result = instance.calcAstronomy(magnitude, distance);
+        
+        // compare expected return value with actual value returned
+        assertEquals(expResult, result, 0.1);
+        
+        /************************************************************************************
+         * Test case #5
+         ************************************************************************************/
+        System.out.println("\tTest case #5");
+        
+        // input values for test case 5
+        magnitude = 0;
+        distance = 8;
+        
+        expResult = -1; //expected output returned value
+        
+        // call function to run test
+        result = instance.calcAstronomy(magnitude, distance);
+        
+        // compare expected return value with actual value returned
+        assertEquals(expResult, result, 0.1);
+        
+        /************************************************************************************
+         * Test case #6
+         ************************************************************************************/
+        System.out.println("\tTest case #6");
+        
+        // input values for test case 6
+        magnitude = 3001;
+        distance = 1;
+        
+        expResult = 3001; //expected output returned value
+        
+        // call function to run test
+        result = instance.calcAstronomy(magnitude, distance);
+        
+        // compare expected return value with actual value returned
+        assertEquals(expResult, result, 0.1);
+        
+        /************************************************************************************
+         * Test case #7
+         ************************************************************************************/
+        System.out.println("\tTest case #7");
+        
+        // input values for test case 7
+        magnitude = 3001;
+        distance = 10;
+        
+        expResult = 30; //expected output returned value
+        
+        // call function to run test
+        result = instance.calcAstronomy(magnitude, distance);
+        
+        // compare expected return value with actual value returned
+        assertEquals(expResult, result, 0.1);
+        
+        
+    }
+    
 }

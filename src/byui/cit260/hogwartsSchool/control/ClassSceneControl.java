@@ -27,4 +27,17 @@ public class ClassSceneControl {
             return gallons;
             }
     
+    public double calcAstronomy(double magnitude, double distance) {
+        if (magnitude > 3001 || magnitude < 3001) {
+            return -1;
+        }
+        if (distance > 10) {
+            return -1;
+        }
+        
+        double x = Math.pow(distance, 2);
+        double apparentMagnitude = magnitude / x;
+        
+        return apparentMagnitude;
+    }
 }
