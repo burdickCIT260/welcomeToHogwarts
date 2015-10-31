@@ -66,6 +66,10 @@ public class Player implements Serializable{
     public void setSortedHouse(String sortedHouse) {
         this.sortedHouse = sortedHouse;
     }
+
+    public void setName(String name) {
+            throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
     
     
     

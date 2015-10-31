@@ -14,6 +14,7 @@ import byui.cit260.hogwartsSchool.model.Game;
 import byui.cit260.hogwartsSchool.model.Map;
 import byui.cit260.hogwartsSchool.model.NotesInventory;
 import byui.cit260.hogwartsSchool.model.Player;
+import byui.cit260.hogwartsSchool.view.StartProgramView;
 
 /**
  *
@@ -21,10 +22,14 @@ import byui.cit260.hogwartsSchool.model.Player;
  */
 public class WelcomeToHogwarts {
     
-    /**
-     *  @param args the command line arguments
-     */
+    private static Game currentGame = null;
+    private static Player player = null;
+
     public static void main(String[] args) {
+       
+    // create StartProgramView and start the program
+    StartProgramView startProgramView = new StartProgramView();
+    startProgramView.startProgram();
     
     /**
      * Game
@@ -127,5 +132,18 @@ public class WelcomeToHogwarts {
 
         
     } 
-
-}
+        public static Game getCurrentGame() {
+            return currentGame;
+        }
+        
+        public static void setCurrentGame(Game currentGame) {
+            WelcomeToHogwarts.currentGame = currentGame;
+        }
+        
+        public static Player getPlayer() {
+            return player;
+        }
+        
+        public static void setPlayer(Player player) {
+            WelcomeToHogwarts.player = player;
+        } /* DUNNO WHY THIS IS GIVING US AN ERROR? */
