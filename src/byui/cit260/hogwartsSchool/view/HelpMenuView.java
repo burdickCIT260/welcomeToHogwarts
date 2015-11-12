@@ -89,10 +89,10 @@ public class HelpMenuView {
         }
     }
 
-    //private String getInput() {
-    //    throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    //}
-    // I think we need to fix/fill this out but I'm not sure how????
+    private String getInput() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+     // I think we need to fix/fill this out but I'm not sure how????
     
     public class GameControl {
         

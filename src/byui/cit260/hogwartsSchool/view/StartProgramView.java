@@ -52,7 +52,7 @@ public class StartProgramView {
         System.out.println("****************************************************************");
     }
 
-    private String getPlayersName() {
+     private String getPlayersName() {
         boolean valid = false; // indicates if the name has to be retrieved
         String playersName = null;
         Scanner keyboard = new Scanner(System.in); // keyboard input stream
@@ -79,7 +79,7 @@ public class StartProgramView {
 
     private void displayWelcomeMessage(Player player) {
         System.out.println("\n\n****************************************************************");
-        System.out.println("\tWelcome to Hogwarts " + player.getName());
+        System.out.println("\tWelcome to Hogwarts " + player.getPlayerName());
         System.out.println("\tEnjoy the game!");
         System.out.println("****************************************************************");
     }

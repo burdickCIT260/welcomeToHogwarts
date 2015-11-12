@@ -20,8 +20,7 @@ public class ProgramControl {
             return null;
         }
         Player player = new Player();
-        player.setName(name);
-        
+        player.setPlayerName(name);
         WelcomeToHogwarts.setPlayer(player); // save the player
         
         return player;

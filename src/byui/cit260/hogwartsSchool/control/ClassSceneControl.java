@@ -40,4 +40,19 @@ public class ClassSceneControl {
         
         return apparentMagnitude;
     }
+    
+    public double calcFlyingAccelleration (double distance, double time) {
+        if (time > 60 || time < 0) {
+            return -1;
+        }
+            
+        if (distance < 0) {
+            return -1;
+        }
+            
+        double x = distance / time;
+        double accelleration = x / time;
+            
+        return accelleration;
+        }
 }

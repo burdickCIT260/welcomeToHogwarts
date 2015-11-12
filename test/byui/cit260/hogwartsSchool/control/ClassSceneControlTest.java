@@ -304,5 +304,123 @@ public class ClassSceneControlTest {
         
         
     }
+   
+  /**
+     * Test of calcFlyingAccelleration method, of class ClassSceneControl.
+     */
+    @Test
+    public void testCalcFlyingAccelleration() {
+        
+        System.out.println("calcFlyingAccelleration");
+        
+        /*************************
+         * Test case #1
+         /*************************/
+        System.out.println("\tTest case #1");
+        
+        // input values for test case 1
+        double distance = 50;
+        double time = 30;
+        
+        double expResult = 0.05; // expected output returned value
+        
+        ClassSceneControl instance = new ClassSceneControl();
+        
+        double result = instance.calcFlyingAccelleration(distance, time);
+        
+        assertEquals(expResult, result, 0.01);
+        
+        System.out.println("calcFlyingAccelleration");
     
+        /*************************
+         * Test case #2
+         /*************************/
+        System.out.println("\tTest case #2");
+        
+        // input values for test case 1
+        distance = -1;
+        time = 47;
+        
+        expResult = -1; // expected output returned value
+              
+        result = instance.calcFlyingAccelleration(distance, time);
+        
+        assertEquals(expResult, result, 0.1);
+     
+       
+        /*************************
+         * Test case #3
+         /*************************/
+        System.out.println("\tTest case #3");
+        
+        // input values for test case 1
+        distance = 23;
+        time = -1;
+        
+        expResult = -1; // expected output returned value
+            
+        result = instance.calcFlyingAccelleration(distance, time);
+        
+        assertEquals(expResult, result, 0.1);
+     
+        /*************************
+         * Test case #4
+         /*************************/
+        System.out.println("\tTest case #4");
+        
+        // input values for test case 1
+        distance = 80;
+        time = 67;
+        
+        expResult = -1; // expected output returned value
+                
+        result = instance.calcFlyingAccelleration(distance, time);
+        
+        assertEquals(expResult, result, 0.01);
+         
+        /*************************
+         * Test case #5
+         /*************************/
+        System.out.println("\tTest case #5");
+        
+        // input values for test case 1
+        distance = 0;
+        time = 50;
+        
+        expResult = 0; // expected output returned value
+        
+        result = instance.calcFlyingAccelleration(distance, time);
+        
+        assertEquals(expResult, result, 0.1);
+        
+        /*************************
+         * Test case #6
+         /*************************/
+        System.out.println("\tTest case #6");
+        
+        // input values for test case 1
+        distance = 67;
+        time = 1;
+        
+        expResult = 67; // expected output returned value
+        
+                result = instance.calcFlyingAccelleration(distance, time);
+        
+        assertEquals(expResult, result, 0.1);
+
+        /*************************
+         * Test case #7
+         /*************************/
+        System.out.println("\tTest case #7");
+        
+        // input values for test case 1
+        distance = 72;
+        time = 60;
+        
+        expResult = .02; // expected output returned value
+            
+        result = instance.calcFlyingAccelleration(distance, time);
+        
+        assertEquals(expResult, result, 0.1);
+     
 }
