@@ -21,6 +21,7 @@ public class ProgramControl {
         }
         Player player = new Player();
         player.setPlayerName(name);
+        
         WelcomeToHogwarts.setPlayer(player); // save the player
         
         return player;
