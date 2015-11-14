@@ -5,7 +5,9 @@
  */
 package byui.cit260.hogwartsSchool.view;
 
+import byui.cit260.hogwartsSchool.control.GameControl;
 import byui.cit260.hogwartsSchool.model.Player;
+import java.util.Scanner;
 import welcomeToHogwarts.WelcomeToHogwarts;
 
 /**
@@ -20,66 +22,67 @@ public class HelpMenuView {
             + "\n------------------------------------"
             + "\nG - What is the goal of the game?"
             + "\nM - How to move"
-            + "\nP How do I get points?"
-            + "\nH What house am I in?"
-            + "\nN What are notes?"
-            + "\nQ Quit"
+            + "\nP - How do I get points?"
+            + "\nH - What house am I in?"
+            + "\nN - What are notes?"
+            + "\nQ - Quit"
             + "\n------------------------------------";
-    private Object GameControl;
             
     public void displayMenu() {
         
         char selection = ' ';
         do {
+            System.out.println(MENU); // display the main menu
             
-            System.out.println(MENU); //display main menu
+            String input = this.getInput(); // get the user's selection
+            selection = input.charAt(0); // get first character of the string
             
-            String input = this.getInput(); //get user's input
-            selection = input.charAt(0); //get first character of string
-           
-            this.doAction(selection); //do action based on selection
-            
-        } while (selection !='Q'); //a selection is not "Exit"
-    }
+            this.doAction(selection); // do action based on selection
+        } while (selection != 'Q'); // a selection is not "Exit"
+    } 
 
+    private String getInput() {
+        boolean valid = false; // indicates if the name has to be retrieved
+        String input = null;
+        Scanner keyboard = new Scanner(System.in); // keyboard input stream
     
-    private void displayHelpGame() {
-        System.out.println("*** displayHelpGame function called ***");
-    }
-    
-    private void displayHelpMove() {
-        System.out.println("*** displayHelpMove function called ***");
-    }
-    
-    private void displayHelpPoints() {
-        System.out.println("*** displayHelpPoints function called ***");
-    }
-    
-    private void displayHelpHouse() {
-        System.out.println("*** displayHelpHouse function called ***");
-    }
+        while(!valid) { // while a valid menu option has not been retrieved
 
-    private void displayHelpNotes() {
-        System.out.println("*** displayHelpNotes function called ***");
+	// prompt user to input menu option
+	System.out.println("Please enter a menu option below:");
+
+	// get users input and trim off blanks
+	input = keyboard.nextLine();
+	input = input.trim();
+
+	// if name is invalid (more than one letter; not G, S, H or E) display error message
+	if (input.length() > 1) {
+		System.out.println("Please only enter one character");
+		continue; //add repeat again
+	}
+	break; // out of the (exit) repition)     
+        }
+	return input;
+        
     }
 
     public void doAction(char choice) {
         
         switch (choice) {
-            case 'G':
-                this.helpGame();
+            case 'G': //goal of the game
+                System.out.println("\n*** What is the goal of the game??? Explaination ***");
                 break;
-            case 'M': 
-                this.helpMove();
+            case 'M': //how to move
+                System.out.println("\n*** How to move??? Explaination ***");
                 break;
-            case 'P': 
-                this.helpPoints();
+            case 'P': //how to get points
+                System.out.println("\n*** How do I get points??? Explaination ***");
                 break;
-            case 'H': 
-                this.helpHouse();
+            case 'H': //what house am i in?
+                System.out.println("\n*** What house am I in??? Explaination ***");
                 break;
-            case 'N': 
-                this.helpNotes();
+            case 'N': //what are ntoes?
+                System.out.println("\n*** What are Notes??? Explaination ***");
                 break;
             case 'Q': //exit
                 return;
@@ -88,22 +91,5 @@ public class HelpMenuView {
                 break;
         }
     }
-
-    private String getInput() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+      
     }
-     // I think we need to fix/fill this out but I'm not sure how????
-    
-    public class GameControl {
-        
-        public static void createNewGame(Player player) {
-            System.out.println("\n*** createNewGame stub function called ***");
-        }
-    }
-    public class GameMenuView {
-        
-        void displayMenu() {
-            System.out.println("\n*** displayMenu stub function called ***");
-        }
-    }
-}

@@ -146,4 +146,5 @@ public class WelcomeToHogwarts {
         
         public static void setPlayer(Player player) {
             WelcomeToHogwarts.player = player;
-        } /* DUNNO WHY THIS IS GIVING US AN ERROR? */
+        }
+}

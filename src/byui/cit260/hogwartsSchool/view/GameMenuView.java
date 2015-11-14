@@ -10,5 +10,9 @@ package byui.cit260.hogwartsSchool.view;
  * @author Coggputer
  */
 class GameMenuView {
+
+    void displayMenu() {
+        System.out.println("\n*** displayMenu stub function called ***");
+        }
     
 }
