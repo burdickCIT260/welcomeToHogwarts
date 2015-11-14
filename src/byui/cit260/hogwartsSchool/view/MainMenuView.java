@@ -89,6 +89,7 @@ public class MainMenuView {
     }
 
     private void startNewGame() {
+        
         GameControl.createNewGame(WelcomeToHogwarts.getPlayer());
         
         // display the game menu
